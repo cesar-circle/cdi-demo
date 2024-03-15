@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright (c) 2024 Circle Internet Financial Trading Company Limited.
+  ~ All rights reserved.
+  ~
+  ~ Circle Internet Financial Trading Company Limited CONFIDENTIAL
+  ~
+  ~ This file includes unpublished proprietary source code of Circle Internet
+  ~ Financial Trading Company Limited, Inc. The copyright notice above does not
+  ~ evidence any actual or intended publication of such source code. Disclosure
+  ~ of this source code or any related proprietary information is strictly
+  ~ prohibited without the express written permission of Circle Internet Financial
+  ~ Trading Company Limited.
+  -->
+
+<extensions xmlns="http://maven.apache.org/EXTENSIONS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/EXTENSIONS/1.0.0 http://maven.apache.org/xsd/core-extensions-1.0.0.xsd">
+    <extension>
+    <!--
+    Extension to handle auth token authentication with CodeArtifact
+    See https://github.com/circlefin/codeartifact-helper/README.md for details
+    -->
+        <groupId>com.circle</groupId>
+        <artifactId>codeartifact-helper</artifactId>
+        <version>2.0.0</version>
+    </extension>
+</extensions>

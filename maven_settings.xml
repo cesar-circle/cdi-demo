@@ -1,0 +1,45 @@
+<!-- use https rather than http -->
+<settings>
+    <!-- Put the copied dependencies in a place where Docker can cache them. -->
+    <localRepository>${user.home}/.m2/repository</localRepository>
+    <activeProfiles>
+        <!--make the profile active all the time -->
+        <activeProfile>securecentral</activeProfile>
+    </activeProfiles>
+    <servers>
+        <server>
+            <id>circle-platform-codeartifact</id>
+            <username>aws</username>
+            <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>securecentral</id>
+            <!--Override the repository (and pluginRepository) "central" from the
+               Maven Super POM -->
+            <repositories>
+                <repository>
+                    <id>circle-platform-codeartifact</id>
+                    <url>https://cfn-514563129364.d.codeartifact.us-east-1.amazonaws.com/maven/circle-platform/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>circle-platform-codeartifact</id>
+                    <url>https://cfn-514563129364.d.codeartifact.us-east-1.amazonaws.com/maven/circle-platform/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>codeartifact-helper-s3</id>
+                    <url>https://codeartifact-helper.s3.us-east-1.amazonaws.com/circle-platform-release</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>
