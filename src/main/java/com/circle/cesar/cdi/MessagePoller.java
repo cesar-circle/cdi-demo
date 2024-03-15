@@ -1,10 +1,10 @@
 package com.circle.cesar.cdi;
 
-public class MessageProducer {
+public class MessagePoller {
     private final String queueName;
     private final Worker worker;
 
-    public MessageProducer(String queueName, Worker worker) {
+    public MessagePoller(String queueName, Worker worker) {
         this.queueName = queueName;
         this.worker = worker;
     }
