@@ -11,7 +11,7 @@
  * Trading Company Limited.
  */
 
-package com.circle.cesar.cdi;
+package com.circle.cesar.cdi.extension;
 
 import jakarta.inject.Qualifier;
 

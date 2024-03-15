@@ -1,5 +1,7 @@
 package com.circle.cesar.cdi;
 
+import com.circle.cesar.cdi.extension.QueueName;
+import com.circle.cesar.cdi.extension.Worker;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @QueueName("my-queue")

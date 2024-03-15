@@ -1,9 +1,5 @@
 package com.circle.cesar.cdi.extension;
 
-import com.circle.cesar.cdi.MessagePoller;
-import com.circle.cesar.cdi.QueueName;
-import com.circle.cesar.cdi.QueueNameLiteral;
-import com.circle.cesar.cdi.Worker;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.enterprise.inject.spi.AfterBeanDiscovery;
@@ -43,7 +39,7 @@ public class DemoExtension implements Extension {
 
     public void collectWorkers(@Observes ProcessBean<? extends Worker> event) {
         getQueueName(event).ifPresent(queueName -> {
-            System.out.printf("Registered worker for queue '%s'%n", queueName);
+            System.out.printf("Collecting worker for queue '%s'%n", queueName);
             workers.put(queueName, event.getBean());
         });
     }

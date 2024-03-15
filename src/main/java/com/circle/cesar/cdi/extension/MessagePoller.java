@@ -1,4 +1,4 @@
-package com.circle.cesar.cdi;
+package com.circle.cesar.cdi.extension;
 
 public class MessagePoller {
     private final String queueName;

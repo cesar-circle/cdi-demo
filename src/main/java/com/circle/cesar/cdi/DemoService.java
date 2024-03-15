@@ -1,5 +1,7 @@
 package com.circle.cesar.cdi;
 
+import com.circle.cesar.cdi.extension.MessagePoller;
+import com.circle.cesar.cdi.extension.QueueName;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
